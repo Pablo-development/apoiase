@@ -13,12 +13,12 @@
   <div id="page">
     <header id="cabecalho">
       <div class="filho-cabecalho">
-        <a href='https://www.freecodecamp.org/'><button class="botao-cabecalho">APOIE</button></a>
-        <a href='https://www.freecodecamp.org/'><button class="botao-cabecalho">DÚVIDAS FREQUENTES</button></a>
+        <a href="{% url 'cadastro_clientes' %}"><button class="botao-cabecalho">APOIE</button></a>
+        <a href="{% url 'duvidas_frequentes' %}"><button class="botao-cabecalho">DÚVIDAS FREQUENTES</button></a>
       </div>
-      <a href='https://www.freecodecamp.org/'><img src="/static/imagens/césar-2.png" class="logo"></a>
+      <a href="{% url 'duvidas_frequentes' %}"><img src="/static/imagens/césar-2.png" class="logo"></a>
       <div class="filho-cabecalho">
-        <a href='https://www.freecodecamp.org/'><button class="botao-cabecalho">ACESSAR MINHA CONTA</button></a>
+        <a href="{% url 'cadastro_clientes' %}"><button class="botao-cabecalho">ACESSAR MINHA CONTA</button></a>
       </div>
     </header>
     <div id="main">
@@ -34,9 +34,12 @@
                     <input class="formulario" type="email" name="useremail" placeholder="Digite seu e-mail"/>
                     <input class="formulario" type="number" name="userfone" placeholder="Digite seu telefone"/>
                     <button class="enviar" type="submit">ENVIAR</button>
-                    Nome digitado: {{username}}<br>
-                    email digitado: {{useremail}}<br>
-                    Nome digitado: {{userfone}}<br>
+                    {% if username != None %}
+                        Nome digitado: {{username}}<br>
+                        Email digitado: {{useremail}}<br>
+                        Telefone digitado: {{userfone}}<br>
+                    {% endif %}
+
                 </div>
             </form>
         </div>
@@ -75,7 +78,7 @@
             <button class="botaorodape">Novidades</button>
           </div>
         </div>
-        <img src="/static/imagens/certified.png" class="certificado">
+        <img src="/static/imagens/certified.png" class="certificado" alt="certificado">
     </footer>
   </div>
 </body>

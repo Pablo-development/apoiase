@@ -64,7 +64,7 @@
   width: auto;
   height: auto;
   padding: 35px;
-  background-image: url(https://github.com/CesarVinicius4/seminario_N1/tree/main/imagens/cesar-2.png);
+  background-image: url(imagens/césar3_Prancheta1.png);
   background-size: 110%;
   background-position: center;
   margin-top: 20px;
@@ -120,7 +120,7 @@
 
 .segundainfo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   max-width: 300px;
   height: 400px;
