@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="{% static '/login.css' %}">
+</head>
+<body>
+    <div class="login">
+        <h1 class="title">Login</h1>
+        <div class="labtext">
+            <form method="post">
+                {% csrf_token %}
+                <div class="infos">
+                    <input class="botao" type="text" name= "username" placeholder="Nome" />
+                    <input class="botao" type="email" placeholder="E-mail" name="email"/>
+                    <input class="botao" type="password" placeholder="Senha" name= "password"/>
+                </div>
+                <div class="remeber">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember" id="textremember">Lembrar senha</label>
+                </div>
+                <div class="remeber">
+                    <button class="enviar">ENVIAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

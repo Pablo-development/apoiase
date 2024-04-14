@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("imagens/césar3_Prancheta1.png");
+    background-size: 130%;
+    background-position: center;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25vw;
+    height: 35vh;
+    background-color:rgb(61, 59, 59);
+    border-radius: 4px;
+    padding: 60px 25px 60px 25px;
+}
+.title{
+    color: white;
+}
+.infos{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+.botao{
+    border: none;
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+}
+.remeber{
+    display: flex;
+    justify-content: center;
+}
+#textremember{
+    color: white;
+    margin-left: 10px;
+}
+.enviar{
+    width: 182px;
+    border: none;
+    margin: 10px 5px 0 5px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: blueviolet;
+}
