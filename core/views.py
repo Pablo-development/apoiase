@@ -32,8 +32,8 @@ def cadastro(request):
         password = request.POST['password']
 
         # criação de novo usuario para autenticação
-        User.objects.create_user(username=username, email=email, password=request.POST['password'])
-        return redirect('login')
+        User.objects.create_user(username=request.POST['username'], email=request.POST['email'], password=request.POST['password'])
+        return redirect('fazer_login')
     else:
         return render(request, 'cadastro.html')
 
